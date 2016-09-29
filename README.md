@@ -13,3 +13,7 @@ These test files can be piped into standard input to simulate the entire move se
 For example, to simulate X winning via a diagonal:
 python tictactoe.py < xdiag1.txt
 
+Ideas for future versions:
+1. update grpahical interface
+2. create AI to play as player "O"
+3. Make interface point and click instead of text based.

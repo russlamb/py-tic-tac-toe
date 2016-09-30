@@ -75,6 +75,32 @@ def check_if_win_diagonal(grid,player):
         return True
     return False
 
+
+def check_if_win_any(grid,player):
+    win = 3*player
+    grid_len = len(grid)-1
+    diag1 = ""
+    diag2 = ""
+    for i in range(0,len(grid)):
+        
+        diag1 = diag1 + grid[i][i]
+        diag2 = diag2 + grid[grid_len - i][i]
+        row = ""
+        col = ""
+        for j in range(0,len(grid[i])):
+            col = col + grid[j][i]
+            row = row + grid[i][j]
+        
+        if row == win:
+            return True
+        
+        if col == win:
+            return True
+            
+    if diag1 == win or diag2 == win:
+        return True
+    return False
+
 def parse_move(grid, player):
     x=""
     y=""
